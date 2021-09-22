@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalculationDataForm</class>
+ <widget class="QWidget" name="CalculationDataForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>795</width>
+    <height>323</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="1,1">
+   <property name="horizontalSpacing">
+    <number>30</number>
+   </property>
+   <property name="verticalSpacing">
+    <number>9</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QFormLayout" name="formLayout">
+     <property name="horizontalSpacing">
+      <number>9</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>9</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="cd_f_label">
+       <property name="text">
+        <string notr="true">F&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Safety factor&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="cd_f_lineedit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="cd_kd_label">
+       <property name="text">
+        <string notr="true">Kd&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Damaged permeability&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="cd_kd_lineedit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_kd_unit_label">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;m&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="cd_t_s_label">
+       <property name="text">
+        <string notr="true">t&lt;span style=&quot; vertical-align:sub;&quot;&gt;S&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Thickness of mill&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="cd_t_s_lineedit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_t_s_unit_label">
+         <property name="text">
+          <string>m</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="cd_vol_acid_label">
+       <property name="text">
+        <string notr="true">Vol&lt;span style=&quot; vertical-align:sub;&quot;&gt;acid&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Total acid volume&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="cd_vol_acid_lineedit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_vol_acid_unit_label">
+         <property name="text">
+          <string>m&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="cd_vol_pump_label">
+       <property name="text">
+        <string notr="true">Vol&lt;span style=&quot; vertical-align:sub;&quot;&gt;pump&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Total pumped acid&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLineEdit" name="cd_vol_pump_lineedit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_vol_pump_unit_label">
+         <property name="text">
+          <string>m&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="cd_vol_pickling_label">
+       <property name="text">
+        <string notr="true">Vol&lt;span style=&quot; vertical-align:sub;&quot;&gt;pickling&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Pickling volume&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLineEdit" name="cd_vol_pickling_lineedit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_vol_pickling_unit_label">
+         <property name="text">
+          <string>m&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="cd_ro_label">
+       <property name="text">
+        <string notr="true">&amp;rho;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Fluid density&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLineEdit" name="cd_ro_lineedit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_ro_unit_label">
+         <property name="text">
+          <string>kg/m&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="cd_ro_d_label">
+       <property name="text">
+        <string notr="true">&amp;rho;d&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Fluid density&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLineEdit" name="cd_ro_d_lineedit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_ro_d_unit_label">
+         <property name="text">
+          <string>ppg</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QFormLayout" name="formLayout_2">
+     <property name="horizontalSpacing">
+      <number>9</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>9</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="cd_p_safe_label">
+       <property name="text">
+        <string notr="true">P&lt;span style=&quot; vertical-align:sub;&quot;&gt;safe&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Safe margin&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLineEdit" name="cd_p_safe_lineedit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_p_safe_unit_label">
+         <property name="text">
+          <string>Pa</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="cd_p_fric_label">
+       <property name="text">
+        <string notr="true">P&lt;span style=&quot; vertical-align:sub;&quot;&gt;fric&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Friction pressure&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLineEdit" name="cd_p_fric_lineedit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_p_fric_unit_label">
+         <property name="text">
+          <string>Pa</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="cd_hydrostatic_pressure_label">
+       <property name="text">
+        <string notr="true">P&lt;span style=&quot; vertical-align:sub;&quot;&gt;hyd&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Hydrostatic pressure&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QLineEdit" name="cd_hydrostatic_pressure_lineedit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_hydrostatic_pressure_unit_label">
+         <property name="text">
+          <string>Pa</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="cd_well_head_pressure_label">
+       <property name="text">
+        <string notr="true">P&lt;span style=&quot; vertical-align:sub;&quot;&gt;S&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Well head pressure&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <widget class="QLineEdit" name="cd_well_head_pressure_lineedit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_well_head_pressure_unit_label">
+         <property name="text">
+          <string>Pa</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="cd_q_max_label">
+       <property name="text">
+        <string notr="true">Q&lt;span style=&quot; vertical-align:sub;&quot;&gt;max&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Max injection rate&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <widget class="QLineEdit" name="cd_q_max_lineedit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_q_max_unit_label">
+         <property name="text">
+          <string>m&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt;/s</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="cd_q_min_label">
+       <property name="text">
+        <string notr="true">Q&lt;span style=&quot; vertical-align:sub;&quot;&gt;min&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Minimum allowable&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;pumping rate&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <widget class="QLineEdit" name="cd_q_min_lineedit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_q_min_unit_label">
+         <property name="text">
+          <string>m&lt;span style=&quot; vertical-align:super;&quot;&gt;3&lt;/span&gt;/s</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="cd_t_ci_label">
+       <property name="text">
+        <string notr="true">t&lt;span style=&quot; vertical-align:sub;&quot;&gt;CI&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Corrosion&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;inhibition time&lt;/span&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <widget class="QLineEdit" name="cd_t_ci_lineedit"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="cd_t_ci_unit_label">
+         <property name="text">
+          <string>s</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cd_f_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_kd_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_p_safe_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>643</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_t_ci_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>647</x>
+     <y>275</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_t_s_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>244</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_vol_acid_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_vol_pump_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_ro_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cd_ro_d_lineedit</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>CalculationDataForm</receiver>
+   <slot>textEdited()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>289</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

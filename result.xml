@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data language="english" recommendationId="1">
+   <property key="ld_compatibility_data"/>
+   <property key="md_cementing_material_carbonate">
+      <parameter value="false"/>
+   </property>
+   <property key="md_clays_types">
+      <parameter value="Ellite" id="1">
+         <recommendation parameterId="1" id="58">It is not recommend to use HCl.</recommendation>
+      </parameter>
+   </property>
+   <property key="md_formation_types">
+      <parameter value="Carbonate" id="1">
+         <recommendation parameterId="1" id="46">Never ever choose HF acid.</recommendation>
+         <recommendation parameterId="1" id="47">HCl or organic acid should be used.</recommendation>
+      </parameter>
+   </property>
+   <property key="pa_additives"/>
+   <property key="pd_formation_damage"/>
+   <property key="pd_gas_lift_mandrel">
+      <parameter value="false"/>
+   </property>
+   <property key="pd_oil_contain_asphaltin">
+      <parameter value="false"/>
+   </property>
+   <property key="pd_oil_contain_paraffin">
+      <parameter value="false"/>
+   </property>
+   <property key="pp_use_diversion">
+      <parameter value="false"/>
+   </property>
+   <property key="rd_drive_mechanism"/>
+   <property key="rd_permeability_type"/>
+   <property key="rd_skin_factor">
+      <parameter value="nan"/>
+   </property>
+   <property key="wd_completion_type">
+      <parameter value="Ni" id="2">
+         <recommendation parameterId="2" id="4">Pickling steps should be avoided and use coiled tubing as a placement technique to protect the completion.</recommendation>
+      </parameter>
+   </property>
+   <property key="wd_deviation">
+      <parameter value="2"/>
+   </property>
+   <property key="wd_hole_type">
+      <parameter value="2"/>
+   </property>
+   <property key="wd_paz_zone_length">
+      <parameter value="0"/>
+   </property>
+   <property key="wd_primary_cementing">
+      <parameter value="false"/>
+   </property>
+   <property key="wd_tubing_volume">
+      <parameter value="0"/>
+   </property>
+   <property name="Тип скважины" key="wd_well_type">
+      <parameter value="Water well" id="2">
+         <recommendation parameterId="2" id="2">Flow back step should be executed. If flow back step will be cancelled and the solubility test is 100 %, the over-flush volume should be duplicated.</recommendation>
+      </parameter>
+   </property>
+</data>

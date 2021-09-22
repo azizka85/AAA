@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/window-icon.ico</file>
+        <file>image/database.png</file>
+        <file>image/recommendation.png</file>
+    </qresource>
+</RCC>

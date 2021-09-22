@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>980</width>
+    <height>613</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AAA - Database</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/image/window-icon.ico</normaloff>:/image/window-icon.ico</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="recommendationLabel">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Recommendation from:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="recommendationComboBox">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableView" name="recommendationTableView">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectItems</enum>
+        </property>
+        <property name="verticalScrollMode">
+         <enum>QAbstractItemView::ScrollPerPixel</enum>
+        </property>
+        <property name="horizontalScrollMode">
+         <enum>QAbstractItemView::ScrollPerPixel</enum>
+        </property>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>980</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_Change_Database"/>
+    <addaction name="actionEditRecommendations"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="locale">
+     <locale language="English" country="UnitedStates"/>
+    </property>
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <widget class="QMenu" name="menuLanguage">
+     <property name="locale">
+      <locale language="English" country="UnitedStates"/>
+     </property>
+     <property name="title">
+      <string>Language</string>
+     </property>
+     <addaction name="actionKazakh"/>
+     <addaction name="actionRussian"/>
+     <addaction name="actionEnglish"/>
+    </widget>
+    <addaction name="action_About"/>
+    <addaction name="separator"/>
+    <addaction name="menuLanguage"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::TopToolBarArea</set>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Change_Database"/>
+   <addaction name="actionRecommendationFieldCategory"/>
+   <addaction name="actionRecommendationField"/>
+   <addaction name="actionEditRecommendations"/>
+   <addaction name="actionWellTypeData"/>
+   <addaction name="actionCompletionTypeData"/>
+   <addaction name="actionDeviation"/>
+   <addaction name="actionHoleType"/>
+   <addaction name="actionReservoirType"/>
+   <addaction name="actionDriveMechanism"/>
+   <addaction name="actionCompatibilityData"/>
+   <addaction name="actionFormationType"/>
+   <addaction name="actionClaysTypes"/>
+   <addaction name="actionFormationDamageType"/>
+   <addaction name="actionFormationDamage"/>
+   <addaction name="actionAcidAdditivesType"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="action_Change_Database">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/database.png</normaloff>:/image/database.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change Database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="actionEditRecommendations">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/recommendation.png</normaloff>:/image/recommendation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Recommendations</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionKazakh">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Kazakh</string>
+   </property>
+  </action>
+  <action name="actionRussian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Russian</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionWellTypeData">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/well_type.png</normaloff>:/image/well_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>Well type data</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+W</string>
+   </property>
+  </action>
+  <action name="actionCompletionTypeData">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/completion_type.png</normaloff>:/image/completion_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>Completion type data</string>
+   </property>
+   <property name="toolTip">
+    <string>Completion type data</string>
+   </property>
+  </action>
+  <action name="actionReservoirType">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/reservoir_permeability.png</normaloff>:/image/reservoir_permeability.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reservoir type</string>
+   </property>
+   <property name="toolTip">
+    <string>Reservoir type</string>
+   </property>
+  </action>
+  <action name="actionDriveMechanism">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/drive_mechanism.png</normaloff>:/image/drive_mechanism.png</iconset>
+   </property>
+   <property name="text">
+    <string>Drive mechanism</string>
+   </property>
+   <property name="toolTip">
+    <string>Drive mechanism</string>
+   </property>
+  </action>
+  <action name="actionCompatibilityData">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/compatibility_data.png</normaloff>:/image/compatibility_data.png</iconset>
+   </property>
+   <property name="text">
+    <string>Compatibility data</string>
+   </property>
+   <property name="toolTip">
+    <string>Compatibility data</string>
+   </property>
+  </action>
+  <action name="actionFormationType">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/formation_type.png</normaloff>:/image/formation_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>Formation type</string>
+   </property>
+   <property name="toolTip">
+    <string>Formation type</string>
+   </property>
+  </action>
+  <action name="actionClaysTypes">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/clay_type.png</normaloff>:/image/clay_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clays types</string>
+   </property>
+   <property name="toolTip">
+    <string>Clays types</string>
+   </property>
+  </action>
+  <action name="actionFormationDamageType">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/formation_damage_type.png</normaloff>:/image/formation_damage_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>Formation damage type</string>
+   </property>
+   <property name="toolTip">
+    <string>Formation damage type</string>
+   </property>
+  </action>
+  <action name="actionFormationDamage">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/formation_damage.png</normaloff>:/image/formation_damage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Formation damage</string>
+   </property>
+   <property name="toolTip">
+    <string>Formation damage</string>
+   </property>
+  </action>
+  <action name="actionAcidAdditivesType">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/acid_additives_type.png</normaloff>:/image/acid_additives_type.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acid additives type</string>
+   </property>
+   <property name="toolTip">
+    <string>Acid additives type</string>
+   </property>
+  </action>
+  <action name="actionRecommendationFieldCategory">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/category_field.png</normaloff>:/image/category_field.png</iconset>
+   </property>
+   <property name="text">
+    <string>Recommendation field category</string>
+   </property>
+   <property name="toolTip">
+    <string>Recommendation field category</string>
+   </property>
+  </action>
+  <action name="actionRecommendationField">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/field.png</normaloff>:/image/field.png</iconset>
+   </property>
+   <property name="text">
+    <string>Recommendation Field</string>
+   </property>
+   <property name="toolTip">
+    <string>Recommendation Field</string>
+   </property>
+  </action>
+  <action name="actionCreate">
+   <property name="text">
+    <string>Create</string>
+   </property>
+   <property name="toolTip">
+    <string>Create</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+   <property name="toolTip">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionDeviation">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/deviation.png</normaloff>:/image/deviation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deviation</string>
+   </property>
+   <property name="toolTip">
+    <string>Deviation</string>
+   </property>
+  </action>
+  <action name="actionHoleType">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/image/hole.png</normaloff>:/image/hole.png</iconset>
+   </property>
+   <property name="text">
+    <string>Hole type</string>
+   </property>
+   <property name="toolTip">
+    <string>Hole type</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_About</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openAboutDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Change_Database</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openChangeDatabaseDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEditRecommendations</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openEditRecommendationsDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>recommendationComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>recommendationComboBoxIndexChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>523</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionWellTypeData</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openWellTypeDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>452</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCompletionTypeData</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openCompletionTypeDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReservoirType</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openReservoirTypeDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDriveMechanism</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openDriveMechanismDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCompatibilityData</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openCompatibilityDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFormationType</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFormationTypeDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClaysTypes</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openClaysTypesDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFormationDamageType</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFormationDamageTypeDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFormationDamage</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openFormationDamageDataDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAcidAdditivesType</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openAcidAdditivesType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRecommendationFieldCategory</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openRecommendationFieldCategory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRecommendationField</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openRecommendationField()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>recommendationTableView</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>contextMenuRequested(QPoint)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>489</x>
+     <y>338</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDeviation</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openDeviationDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHoleType</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openHoleTypeDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

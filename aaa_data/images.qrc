@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/window-icon.ico</file>
+        <file>image/database.png</file>
+        <file>image/recommendation.png</file>
+        <file>image/well_type.png</file>
+        <file>image/completion_type.png</file>
+        <file>image/reservoir_permeability.png</file>
+        <file>image/compatibility_data.png</file>
+        <file>image/formation_type.png</file>
+        <file>image/clay_type.png</file>
+        <file>image/formation_damage_type.png</file>
+        <file>image/formation_damage.png</file>
+        <file>image/acid_additives_type.png</file>
+        <file>image/drive_mechanism.png</file>
+        <file>image/field.png</file>
+        <file>image/category_field.png</file>
+        <file>image/deviation.png</file>
+        <file>image/hole.png</file>
+    </qresource>
+</RCC>
